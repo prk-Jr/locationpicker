@@ -115,7 +115,7 @@ class PlacePickerState extends State<PlacePicker> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  SelectPlaceAction(getLocationName(), () => Navigator.of(context).pop(this.locationResult)),
+                  SelectPlaceAction(getLocationName(), () => Navigator.of(context).pop([this.locationResult, markers.first.position])),
                   Divider(height: 8),
                   Padding(
                     child: Text("Nearby Places", style: TextStyle(fontSize: 16)),
